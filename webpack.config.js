@@ -9,6 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     path: resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/'
   },
   mode: NODE_ENV,
   resolve: {
@@ -36,5 +37,6 @@ module.exports = {
     compress: true,
     port: 9000,
     watchFiles: ['public/index.html'],
+    historyApiFallback: true,
   },
 };
