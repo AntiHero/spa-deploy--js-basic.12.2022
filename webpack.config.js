@@ -2,6 +2,7 @@ const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV;
+const PREFIX = NODE_ENV === 'production' ? '/spa-deploy--js-basic.12.2022' : '/';
 
 module.exports = {
   entry: './src/index.ts',
@@ -9,7 +10,7 @@ module.exports = {
     filename: 'bundle.js',
     path: resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: '/'
+    publicPath: PREFIX,
   },
   mode: NODE_ENV,
   resolve: {
