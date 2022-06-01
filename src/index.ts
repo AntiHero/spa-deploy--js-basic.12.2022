@@ -1,3 +1,9 @@
+if (DEPLOY_TO_GITHUB) {
+  Array.from(document.body.querySelectorAll('a')).forEach((a) => {
+    a.setAttribute('href', GITHUB_PREFIX + a.pathname)
+  })
+}
+
 function render() {
   document.querySelector('#app')!.textContent = window.location.href;
 }
