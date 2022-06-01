@@ -35,6 +35,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'public/index.html',
     }),
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+      filename: '404.html'
+    }),
     new webpack.DefinePlugin({
       DEPLOY_TO_GITHUB: NODE_ENV === 'production' ? true : false,
       GITHUB_PREFIX: JSON.stringify(PREFIX)
