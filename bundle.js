@@ -1,1 +1,1 @@
-(()=>{function e(e){const t=window.location.href;document.querySelector("#app").textContent=e?t.includes("#")?t.replace(/#.*/,e):t+e:window.location.href}document.body.addEventListener("click",(t=>{t.target.matches("a")&&e(t.target.hash)})),e()})();
+(()=>{function t(){document.querySelector("#app").textContent=window.location.href}document.body.addEventListener("click",(e=>{if(e.target.matches("a")){e.preventDefault();const o=e.target.href;window.history?window.history.pushState({},"",o):alert("Your browser doesn't support History API"),t()}})),t()})();
